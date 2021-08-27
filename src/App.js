@@ -27,7 +27,7 @@ const App = () => {
 		bridge.subscribe(({ detail: { type, data }}) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
-				schemeAttribute.value = 'client_dark';
+				schemeAttribute.value = 'client_light';
 				document.body.attributes.setNamedItem(schemeAttribute);
 			}
 		});

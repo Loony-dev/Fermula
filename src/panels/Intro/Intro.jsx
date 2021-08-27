@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import {Panel, PanelHeader, Avatar, Group, Div, Header} from '@vkontakte/vkui';
 
-import Logo from "../../components/Logo/index"
+import GameHeader from "../../components/GameHeader/index"
 
 import './Intro.css';
 
@@ -9,7 +9,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
     return (
         <Panel id={id} separator={false}>
             <Header className="header-padding" />
-            <Logo />
+            <GameHeader balance={true} />
 
             {/*<PanelHeader>
                 Фермула

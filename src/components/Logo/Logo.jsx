@@ -1,20 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-import { classNames as cn } from '@vkontakte/vkui';
 
 import './logo.css'
 
-const Logo = ({ className }) => {
+const Logo = () => {
     return (
-        <nav id={cn('Logo', className)} className={cn('Logo', className)}>
-            <div className="navbar-logo">Фермула</div>
-        </nav>
+        <div className="navbar-logo">Фермула</div>
     )
 }
-
-Logo.propTypes = {
-    className: PropTypes.any
-};
 
 export default React.memo(Logo);
