@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-import Div, {Group, Panel, PanelHeader, Avatar} from '@vkontakte/vkui';
+import {Panel, PanelHeader, Avatar, Group, Div} from '@vkontakte/vkui';
 
 import './Intro.css';
 
