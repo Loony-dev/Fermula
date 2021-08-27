@@ -1,5 +1,5 @@
-import React, {Fragment} from 'react';
-import {Panel, Button, Header} from '@vkontakte/vkui';
+import React from 'react';
+import {Panel, Header} from '@vkontakte/vkui';
 
 import GameHeader from "../../components/GameHeader/index"
 
@@ -31,7 +31,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
             <main id="main" className="main">
                 <div className="row">
                     <div className="col-6">
-                        <Button className="buttons-primary w-100"><span>Начать игру</span></Button>
+                        <button onClick={go} className="buttons-primary w-100"><span>Начать игру</span></button>
                     </div>
                 </div>
 

@@ -70,8 +70,8 @@ const App = () => {
 		fetchData().then(() => {});
 	}, []);
 
-	const go = e => {
-		setActivePanel(e.currentTarget.dataset.to);
+	const go = ({panel}) => {
+		setActivePanel(panel);
 	};
 
 	const viewIntro = async function () {
@@ -82,6 +82,8 @@ const App = () => {
 					hasSeenIntro: true
 				})
 			})
+
+			go(Home)
 		} catch (error) {
 			setSnackbar(<Snackbar
 				layout='vertical'
