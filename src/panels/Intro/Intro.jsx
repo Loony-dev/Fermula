@@ -1,13 +1,17 @@
 import React from 'react';
 
-import { Panel, PanelHeader, PanelHeaderBack } from '@vkontakte/vkui';
+import { Panel, PanelHeader } from '@vkontakte/vkui';
 
 import './Intro.css';
 
-const Intro = props => (
-	<Panel id={props.id}>
-		<PanelHeader>Фермула</PanelHeader>
-	</Panel>
-);
+const Intro = (id, snackbarError, fetchedUser, userHasSeenIntro, go) => {
+	return (
+		<Panel id={id} centered={true}>
+			<PanelHeader>Фермула</PanelHeader>
+			{(!userHasSeenIntro && fetchedUser) && 'Hi!'}
+			{snackbarError}
+		</Panel>
+	)
+};
 
 export default Intro;
