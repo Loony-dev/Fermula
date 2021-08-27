@@ -10,7 +10,7 @@ import './Intro.css';
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
     return (
         <Panel id={id} separator={false}>
-            <Header height='50px' />
+            <Header height={50} />
             <nav id="navbar" className="navbar">
                 <div className="navbar-logo">Фермула</div>
                 <div className="navbar-info">
