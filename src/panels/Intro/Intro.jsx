@@ -10,7 +10,10 @@ import './Intro.css';
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
     return (
         <Panel id={id} separator={false}>
-            <PanelHeader id="navbar" className="navbar">
+            <Header />
+            <Header />
+
+            <nav id="navbar" className="navbar">
                 <div className="navbar-logo">Фермула</div>
                 <div className="navbar-info">
                     <div className="navbar-balance">
@@ -22,7 +25,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
                         <span>350</span>
                     </div>
                 </div>
-            </PanelHeader>
+            </nav>
 
             {/*<PanelHeader>
                 Фермула
