@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Panel, PanelHeader, Avatar, Group, Div, Header} from '@vkontakte/vkui';
+import {Panel, Button, Header} from '@vkontakte/vkui';
 
 import GameHeader from "../../components/GameHeader/index"
 
@@ -9,13 +9,9 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
     return (
         <Panel id={id} separator={false}>
             <Header className="header-padding" />
-            <GameHeader balance={true} />
+            <GameHeader balance={false} />
 
-            {/*<PanelHeader>
-                Фермула
-            </PanelHeader>
-
-            {(!userHasSeenIntro && fetchedUser) &&
+            {/*{(!userHasSeenIntro && fetchedUser) &&
                 <Fragment>
                     <Group>
                         <Div className='User'>
@@ -35,7 +31,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
             <main id="main" className="main">
                 <div className="row">
                     <div className="col-6">
-                        <button className="buttons-primary w-100"><span>Начать игру</span></button>
+                        <Button className="buttons-primary w-100"><span>Начать игру</span></Button>
                     </div>
                 </div>
 

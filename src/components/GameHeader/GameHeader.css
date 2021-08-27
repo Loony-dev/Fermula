@@ -33,7 +33,7 @@
     z-index: 1;
 }
 
-.GameHeader::before {
+/*.GameHeader::before {
     position: absolute;
     content: '';
     width: 150px;
@@ -46,4 +46,4 @@
     right: -10px;
     top: 0;
     z-index: 3;
-}
+}*/
