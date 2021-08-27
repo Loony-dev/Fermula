@@ -46,8 +46,8 @@ const App = () => {
 					switch (key) {
 						case STORAGE_KEYS.STATUS:
 							if (data[key].hasSeenIntro) {
-    							setActivePanel(ROUTES.HOME)
-								setUserHasSeenIntro(true)
+    							/*setActivePanel(ROUTES.HOME)
+								setUserHasSeenIntro(true)*/
 							}
 							break
 						default:
@@ -99,7 +99,7 @@ const App = () => {
 			<AppRoot>
 				<View activePanel={activePanel} popout={popout}>
 					<Home id={ROUTES.HOME} fetchedUser={fetchedUser} go={go} snackbarError={snackbar} />
-					<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} go={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
+					<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
 				</View>
 			</AppRoot>
 		</AdaptivityProvider>
