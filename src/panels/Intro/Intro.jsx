@@ -11,7 +11,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
                 Фермула
             </PanelHeader>
 
-            {(userHasSeenIntro && fetchedUser) && 'Hi!'}
+            {(!userHasSeenIntro && fetchedUser) && 'Hi!'}
 
             {snackbarError}
         </Panel>
