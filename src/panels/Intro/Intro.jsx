@@ -7,8 +7,12 @@ import './Intro.css';
 const Intro = (id, snackbarError, fetchedUser, userHasSeenIntro, go) => {
 	return (
 		<Panel id={id} centered={true}>
-			<PanelHeader>Фермула</PanelHeader>
-			{(!userHasSeenIntro && fetchedUser) && 'Hi!'}
+			<PanelHeader>
+				Фермула
+			</PanelHeader>
+
+			{(userHasSeenIntro && fetchedUser) && 'Hi!'}
+
 			{snackbarError}
 		</Panel>
 	)
