@@ -10,19 +10,19 @@ import './Intro.css';
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
     return (
         <Panel id={id}>
-            <Header id='header' className='header'>
-                <Div className='header-logo'>Фермула</Div>
-                <Div className='header-info'>
-                    <Div className='header-balance'>
-                        <Avatar src={Coin} width={15} height={15} />
+            <nav id="navbar" className="navbar">
+                <div className="navbar-logo">Фермула</div>
+                <div className="navbar-info">
+                    <div className="navbar-balance">
+                        <img src={Coin} alt="coin" />
                         <span>350</span>
-                    </Div>
-                    <Div className='header-energy'>
-                        <Avatar src={Lightning} width={15} height={15} />
+                    </div>
+                    <div className="navbar-energy">
+                        <img src={Lightning} alt="lightning" />
                         <span>350</span>
-                    </Div>
-                </Div>
-            </Header>
+                    </div>
+                </div>
+            </nav>
 
             {/*<PanelHeader>
                 Фермула
