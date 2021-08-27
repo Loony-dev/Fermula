@@ -32,3 +32,18 @@
     top: 0;
     z-index: 1;
 }
+
+.GameHeader::before {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 100%;
+    background: #E3E4E7;
+    border-radius: 3px;
+    -webkit-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    transform: skew(20deg);
+    right: -10px;
+    top: 0;
+    z-index: 3;
+}
