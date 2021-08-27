@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
-
 import {Panel, PanelHeader, Avatar, Group, Div, Header} from '@vkontakte/vkui';
+
+import Logo from "../../components/Logo/index"
 
 import './Intro.css';
 
@@ -8,9 +9,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
     return (
         <Panel id={id} separator={false}>
             <Header className="header-padding" />
-            <nav id="navbar" className="navbar">
-                <div className="navbar-logo">Фермула</div>
-            </nav>
+            <Logo />
 
             {/*<PanelHeader>
                 Фермула
