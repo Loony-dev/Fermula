@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-import {FixedLayout, Panel, PanelHeader, Avatar, Group, Div, Header} from '@vkontakte/vkui';
+import {Panel, PanelHeader, Avatar, Group, Div, Header} from '@vkontakte/vkui';
 
 import Coin from '../../img/coin.png'
 import Lightning from '../../img/lightning.png'
@@ -9,7 +9,7 @@ import './Intro.css';
 
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
     return (
-        <FixedLayout id={id} separator={false}>
+        <Panel id={id} separator={false}>
             <Header />
 
             <nav id="navbar" className="navbar">
@@ -41,7 +41,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
             }*/}
 
             {snackbarError}
-        </FixedLayout>
+        </Panel>
     )
 };
 
