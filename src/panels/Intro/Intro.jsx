@@ -10,20 +10,18 @@ import './Intro.css';
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
     return (
         <Panel id={id} separator={false}>
-            <PanelHeader>
-                <nav id="navbar" className="navbar">
-                    <div className="navbar-logo">Фермула</div>
-                    <div className="navbar-info">
-                        <div className="navbar-balance">
-                            <img src={Coin} alt="coin" />
-                            <span>350</span>
-                        </div>
-                        <div className="navbar-energy">
-                            <img src={Lightning} alt="lightning" />
-                            <span>350</span>
-                        </div>
+            <PanelHeader id="navbar" className="navbar">
+                <div className="navbar-logo">Фермула</div>
+                <div className="navbar-info">
+                    <div className="navbar-balance">
+                        <img src={Coin} alt="coin" />
+                        <span>350</span>
                     </div>
-                </nav>
+                    <div className="navbar-energy">
+                        <img src={Lightning} alt="lightning" />
+                        <span>350</span>
+                    </div>
+                </div>
             </PanelHeader>
 
             {/*<PanelHeader>
