@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
-import {Panel, PanelHeader} from '@vkontakte/vkui';
+import Div, {Group, Panel, PanelHeader, Avatar} from '@vkontakte/vkui';
 
 import './Intro.css';
 
@@ -11,7 +11,15 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, go}) => {
                 Фермула
             </PanelHeader>
 
-            {(!userHasSeenIntro && fetchedUser) && 'Hi!'}
+            {(!userHasSeenIntro && fetchedUser) &&
+                <Fragment>
+                    <Group>
+                        <Div className='User'>
+                            {fetchedUser.photo_200 && <Avatar src={fetchedUser.photo_200} />}
+                        </Div>
+                    </Group>
+                </Fragment>
+            }
 
             {snackbarError}
         </Panel>
