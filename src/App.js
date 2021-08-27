@@ -7,14 +7,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Home from './panels/Home';
 import Intro from './panels/Intro/Intro';
 
-const ROUTES = {
-	HOME: 'home',
-	INTRO: 'intro'
-}
-
-const STORAGE_KEYS = {
-	STATUS: 'status'
-}
+import {ROUTES, STORAGE_KEYS} from './utils/constants'
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState(ROUTES.INTRO);
@@ -70,7 +63,7 @@ const App = () => {
 		fetchData().then(() => {});
 	}, []);
 
-	const go = ({panel}) => {
+	const go = (panel) => {
 		setActivePanel(panel);
 	};
 
@@ -83,7 +76,7 @@ const App = () => {
 				})
 			})
 
-			go(Home)
+			go(ROUTES.HOME)
 		} catch (error) {
 			setSnackbar(<Snackbar
 				layout='vertical'
