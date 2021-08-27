@@ -8,7 +8,7 @@ import './GameHeader.css'
 
 const GameHeader = ({ balance = false }) => {
     return (
-        <nav id='Header' className='Header'>
+        <nav id='GameHeader' className='GameHeader'>
             <Logo />
 
             {(balance) && <Balance />}
