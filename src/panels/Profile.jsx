@@ -26,31 +26,31 @@ const Profile = (id, fetchedUser, go) => {
                     <div className="section-name">Ваши детали</div>
                     <div className="section-content">
                         <CardScroll className="owl-carousel owl-products">
-                            <Card>
+                            <Card className="card">
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">1 элемент</div>
                                 </div>
                             </Card>
-                            <Card>
+                            <Card className="card">
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">2 элемент</div>
                                 </div>
                             </Card>
-                            <Card>
+                            <Card className="card">
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">3 элемент</div>
                                 </div>
                             </Card>
-                            <Card>
+                            <Card className="card">
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">4 элемент</div>
                                 </div>
                             </Card>
-                            <Card>
+                            <Card className="card">
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">5 элемент</div>
