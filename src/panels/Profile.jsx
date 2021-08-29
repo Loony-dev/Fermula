@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header, View} from '@vkontakte/vkui';
+import {Header, View, CardScroll, Card} from '@vkontakte/vkui';
 
 import GameHeader from "../components/GameHeader"
 
@@ -25,84 +25,113 @@ const Profile = (id, fetchedUser, go) => {
                 <section className="section">
                     <div className="section-name">Ваши детали</div>
                     <div className="section-content">
-                        <div className="owl-carousel owl-products">
-                            <div className="card">
-                                <img src={Test} alt="" className="card-image"/>
-                                <div className="card-desc">1 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test} alt="" className="card-image"/>
-                                <div className="card-desc">2 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test} alt="" className="card-image"/>
-                                <div className="card-desc">3 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test} alt="" className="card-image"/>
-                                <div className="card-desc">4 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test} alt="" className="card-image"/>
-                                <div className="card-desc">5 элемент</div>
-                            </div>
-                        </div>
+                        <CardScroll className="owl-carousel owl-products">
+                            <Card>
+                                <div className="card">
+                                    <img src={Test} alt="" className="card-image"/>
+                                    <div className="card-desc">1 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test} alt="" className="card-image"/>
+                                    <div className="card-desc">2 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test} alt="" className="card-image"/>
+                                    <div className="card-desc">3 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test} alt="" className="card-image"/>
+                                    <div className="card-desc">4 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test} alt="" className="card-image"/>
+                                    <div className="card-desc">5 элемент</div>
+                                </div>
+                            </Card>
+                        </CardScroll >
                     </div>
                 </section>
                 <section className="section">
                     <div className="section-name">Ваши материалы</div>
                     <div className="section-content">
-                        <div className="owl-carousel owl-products">
-                            <div className="card">
-                                <img src={Test2} alt="" className="card-image"/>
-                                <div className="card-desc">1 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test3} alt="" className="card-image"/>
-                                <div className="card-desc">2 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test2} alt="" className="card-image"/>
-                                <div className="card-desc">3 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test2} alt="" className="card-image"/>
-                                <div className="card-desc">4 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test3} alt="" className="card-image"/>
-                                <div className="card-desc">5 элемент</div>
-                            </div>
-                        </div>
+                        <CardScroll  className="owl-carousel owl-products">
+                            <Card>
+                                <div className="card">
+                                    <img src={Test2} alt="" className="card-image"/>
+                                    <div className="card-desc">1 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test3} alt="" className="card-image"/>
+                                    <div className="card-desc">2 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test2} alt="" className="card-image"/>
+                                    <div className="card-desc">3 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test2} alt="" className="card-image"/>
+                                    <div className="card-desc">4 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test3} alt="" className="card-image"/>
+                                    <div className="card-desc">5 элемент</div>
+                                </div>
+                            </Card>
+                        </CardScroll >
                     </div>
                 </section>
                 <section className="section">
                     <div className="section-name">Ваши здания</div>
                     <div className="section-content">
-                        <div className="owl-carousel owl-products">
-                            <div className="card">
-                                <img src={Test4} alt="" className="card-image"/>
-                                <div className="card-desc">Штаб</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test5} alt="" className="card-image"/>
-                                <div className="card-desc">Заправка</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test4} alt="" className="card-image"/>
-                                <div className="card-desc">Мойка</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test5} alt="" className="card-image"/>
-                                <div className="card-desc">4 элемент</div>
-                            </div>
-                            <div className="card">
-                                <img src={Test4} alt="" className="card-image"/>
-                                <div className="card-desc">5 элемент</div>
-                            </div>
-                        </div>
+                        <CardScroll  className="owl-carousel owl-products">
+                            <Card>
+                                <div className="card">
+                                    <img src={Test4} alt="" className="card-image"/>
+                                    <div className="card-desc">Штаб</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test5} alt="" className="card-image"/>
+                                    <div className="card-desc">Заправка</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test4} alt="" className="card-image"/>
+                                    <div className="card-desc">Мойка</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test5} alt="" className="card-image"/>
+                                    <div className="card-desc">4 элемент</div>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="card">
+                                    <img src={Test4} alt="" className="card-image"/>
+                                    <div className="card-desc">5 элемент</div>
+                                </div>
+                            </Card>
+                        </CardScroll >
                         <a href="#" className="buttons-primary w-50 mt d-block mx-auto"><span>Магазин</span></a>
-
                     </div>
                 </section>
             </main>
