@@ -1,5 +1,5 @@
 import React from 'react';
-import {Panel, Header} from '@vkontakte/vkui';
+import {View, Header} from '@vkontakte/vkui';
 
 import GameHeader from "../components/GameHeader"
 
@@ -7,7 +7,7 @@ import '../assets/css/main.css';
 
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => {
     return (
-        <Panel id={id} separator={false}>
+        <View id={id} separator={false}>
             <Header style={{margin: '0 38px 0 0'}} />
             <GameHeader balance={false} />
 
@@ -43,7 +43,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => 
             </main>
 
             {snackbarError}
-        </Panel>
+        </View>
     )
 };
 

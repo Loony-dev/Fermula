@@ -1,5 +1,5 @@
 import React from 'react';
-import {Panel, Header} from '@vkontakte/vkui';
+import {Header, View} from '@vkontakte/vkui';
 
 import GameHeader from "../components/GameHeader"
 
@@ -13,7 +13,7 @@ import Test5 from '../assets/img/test/test5.png'
 
 const Profile = (id, fetchedUser, go) => {
     return (
-        <Panel id={id}>
+        <View id={id}>
             <Header style={{margin: '0 38px 0 0'}} />
             <GameHeader balance={true} />
 
@@ -106,7 +106,7 @@ const Profile = (id, fetchedUser, go) => {
                     </div>
                 </section>
             </main>
-        </Panel>
+        </View>
     )
 }
 
