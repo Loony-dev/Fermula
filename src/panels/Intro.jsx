@@ -8,18 +8,8 @@ import '../assets/css/main.css';
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => {
     return (
         <Panel id={id} separator={false}>
-            <Header style={{margin: '0 30px 0 0'}} />
+            <Header style={{margin: '0 38px 0 0'}} />
             <GameHeader balance={false} />
-
-            {/*{(!userHasSeenIntro && fetchedUser) &&
-                <Fragment>
-                    <Group>
-                        <Div className='User'>
-                            {fetchedUser.photo_200 && <Avatar src={fetchedUser.photo_200} />}
-                        </Div>
-                    </Group>
-                </Fragment>
-            }*/}
 
             <header id="header" className="header">
                 <div className="welcome-text">

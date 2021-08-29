@@ -9,6 +9,8 @@ import Intro from './panels/Intro';
 
 import {ROUTES, STORAGE_KEYS} from './utils/constants'
 
+import './assets/fonts/TTNorms/stylesheet.css'
+
 const App = () => {
 	const [activePanel, setActivePanel] = useState(ROUTES.INTRO);
 	const [fetchedUser, setUser] = useState(null);
