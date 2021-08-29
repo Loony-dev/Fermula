@@ -5,7 +5,7 @@ import {Icon24Error} from "@vkontakte/icons";
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
-import Intro from './panels/Intro/Intro';
+import Intro from './panels/Intro';
 
 import {ROUTES, STORAGE_KEYS} from './utils/constants'
 
@@ -91,8 +91,8 @@ const App = () => {
 		<AdaptivityProvider>
 			<AppRoot>
 				<View activePanel={activePanel} popout={popout}>
-					<Home id={ROUTES.HOME} fetchedUser={fetchedUser} go={go} snackbarError={snackbar} />
 					<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
+					<Home id={ROUTES.HOME} fetchedUser={fetchedUser} go={go} snackbarError={snackbar} />
 				</View>
 			</AppRoot>
 		</AdaptivityProvider>

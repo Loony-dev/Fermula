@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import Logo from '../Logo/index'
 import Balance from '../Balance/index'
 
-import './GameHeader.css'
+import '../../assets/css/main.css';
 
 const GameHeader = ({ balance = false }) => {
     return (
-        <nav id='GameHeader' className='GameHeader'>
+        <nav id='navbar' className='navbar'>
             <Logo />
 
             {(balance) && <Balance />}

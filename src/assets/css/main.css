@@ -1,0 +1,550 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'TT Norms Regular', serif;
+}
+
+.navbar {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #EFF0F3;
+    min-height: 35px;
+    width: 100%;
+    padding: 0px 25px;
+}
+
+.navbar::before {
+    position: absolute;
+    content: '';
+    width: 110px;
+    height: 100%;
+    background: #FF8E3C;
+    border-radius: 3px;
+    -webkit-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    transform: skew(-20deg);
+    left: -10px;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar-logo {
+    font-size: 12px;
+    z-index: 2;
+    font-family: 'TT Norms Bold', serif;
+}
+
+.navbar-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.navbar-balance,
+.navbar-energy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.navbar-balance span,
+.navbar-energy span {
+    font-family: 'TT Norms Bold', serif;
+    font-size: 12px;
+}
+
+.header {
+    background: url('../img/header-bcg.png') no-repeat center center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.welcome-text {
+    z-index: 2;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.welcome-text h3 {
+    font-family: 'TT Norms Bold', serif;
+    margin-bottom: 5px;
+}
+
+.welcome-text p {
+    font-family: 'TT Norms Medium', serif;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 14px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-desc {
+    font-size: 12px;
+    font-family: 'TT Norms Medium', serif;
+    color: #878787;
+}
+
+.text-desc span {
+    font-family: 'TT Norms Medium', serif;
+    color: #FF8E3C;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.col-6 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 46%;
+    margin: 0 2%;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.w-75 {
+    width: 75% !important;
+}
+
+.d-block {
+    display: block;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.mt {
+    margin-top: 10px !important;
+}
+.mb {
+    margin-top: 10px !important;
+}
+
+.main {
+    padding: 30px 30px;
+}
+
+.buttons-primary {
+    display: block;
+    text-align: center;
+    background-color: #FF8E3C;
+    color: #0D0D0D;
+    border: none;
+    text-decoration: none;
+    padding: 13px 24px;
+    -webkit-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    transform: skew(-10deg);
+    border-radius: 3px;
+}
+
+.buttons-primary:hover {
+    color: #0D0D0D;
+}
+
+.buttons-primary span {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'TT Norms Medium', serif;
+    -webkit-transform: skew(10deg);
+    -ms-transform: skew(10deg);
+    transform: skew(10deg);
+}
+
+.buttons-light {
+    text-align: center;
+    background-color: #EFF0F3;
+    border: none;
+    text-decoration: none;
+    font-family: 'TT Norms Bold', serif;
+    padding: 13px 24px;
+    font-size: 14px;
+    -webkit-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    transform: skew(-10deg);
+    border-radius: 3px;
+}
+
+.buttons-light span {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.56);
+    font-size: 14px;
+    font-family: 'TT Norms Medium', serif;
+    -webkit-transform: skew(10deg);
+    -ms-transform: skew(10deg);
+    transform: skew(10deg);
+}
+
+.welcome-content {
+    margin: 50px 0;
+}
+
+.welcome-content h3 {
+    font-family: 'TT Norms Bold', serif;
+    margin-bottom: 5px;
+}
+.welcome-content p {
+    font-family: 'TT Norms Medium', serif;
+    color: #BCBCBC;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.inputs {
+    background-color: #EFF0F3;
+    border: none;
+    height: 45px;
+    text-align: center;
+    font-family: 'TT Norms Medium', serif;
+    transform: skew(-10deg);
+    margin-bottom: 15px;
+}
+
+.links {
+    color: #FF8E3C;
+    text-decoration: none;
+    font-family: 'TT Norms Medium', serif;
+    transition: 0.2s;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.page-name {
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    font-family: 'TT Norms Bold', serif;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-name {
+    text-align: center;
+    font-family: 'TT Norms Bold', serif;
+    margin-bottom: 15px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.card-image {
+    width: 50px !important;
+    height: auto;
+}
+
+.card-desc {
+    font-family: 'TT Norms Medium', serif;
+    font-size: 12px;
+}
+
+.owl-products .owl-nav {
+    display: flex !important;
+    justify-content: space-between;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    z-index: 2;
+}
+
+.owl-products .owl-nav button {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FF8E3C !important;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #0D0D0D;
+}
+
+.owl-products .owl-nav button span {
+    font-size: 25px;
+    line-height: 24px;
+}
+
+.owl-products .owl-carousel {
+    position: relative;
+    max-height: 100px !important;
+    overflow: hidden;
+}
+
+.shopping-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.shopping-item:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shopping-img {
+    margin-right: 15px;
+}
+
+.shopping-desc {
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+}
+
+.shopping-desc span:first-child {
+    font-size: 15px;
+    font-family: 'TT Norms Bold', serif;
+}
+
+.shopping-desc span:first-child small {
+    font-family: 'TT Norms medium', serif;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.shopping-button {
+    display: block;
+    text-align: center;
+    background-color: #EFF0F3;
+    color: rgba(0, 0, 0, 0.56);
+    border: none;
+    text-decoration: none;
+    padding: 13px 24px;
+    -webkit-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    transform: skew(-10deg);
+    border-radius: 3px;
+    font-family: 'TT Norms medium', serif;
+    transition: 0.2s;
+}
+
+.shopping-button:hover {
+    background-color: #FF8E3C;
+    color: #0D0D0D;
+    cursor: pointer;
+}
+
+.shopping-desc span:last-child {
+    font-size: 12px;
+    font-family: 'TT Norms medium', serif;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.shopping-score {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.56);
+    font-family: 'TT Norms medium', serif;
+}
+
+table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+table tr td {
+    font-family: 'TT Norms Medium', serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.56);
+    padding: 10px 0;
+}
+
+table tr th {
+    font-family: 'TT Norms Bold', serif;
+    font-size: 14px;
+}
+
+table tr:nth-child(2n-1) {
+    background-color: #EFF0F3;
+}
+
+.garage-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.garage {
+    background-image: url('../img/garage-bcg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 220px;
+    padding: 0 30px;
+    position: relative;
+}
+
+.garage::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 43px;
+    background-image: url('../img/garage-after.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+}
+
+.garage-title {
+    color: #fff;
+    font-family: 'TT Norms Bold', serif;
+    z-index: 2;
+    margin-top: 13px;
+}
+
+.garage-car {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 28px;
+}
+
+.garage-car__image {
+    height: 50px;
+    width: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.owl-garage {
+    position: relative;
+}
+
+.owl-theme .owl-nav {
+    display: flex;
+    justify-content: space-between;
+    width: calc( 100% - 100px);
+    margin: 0 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.owl-theme .owl-nav button {
+    display: block;
+    background: #fff !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% !important;
+}
+
+.owl-theme .owl-nav button span {
+    font-size: 20px;
+    line-height: 18px;
+}
+
+.owl-theme .owl-nav button:hover {
+background-color: #FF8E3C !important;
+}
+
+.garage-race {
+    background-color: #FF8E3C;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 2px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: 'TT Norms Medium', serif;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-family: 'TT Norms Medium', serif;
+    background-color: #EFF0F3;
+    height: 35px;
+    width: 100%;
+    color: #707070;
+}

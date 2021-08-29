@@ -1,14 +1,14 @@
 import React from 'react';
 import {Panel, Header} from '@vkontakte/vkui';
 
-import GameHeader from "../../components/GameHeader/index"
+import GameHeader from "../components/GameHeader"
 
-import './Intro.css';
+import '../assets/css/main.css';
 
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => {
     return (
         <Panel id={id} separator={false}>
-            <Header className="header-padding" />
+            <Header style={{margin: '0 30px 0 0'}} />
             <GameHeader balance={false} />
 
             {/*{(!userHasSeenIntro && fetchedUser) &&

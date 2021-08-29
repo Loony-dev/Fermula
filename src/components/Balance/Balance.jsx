@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Coin from '../../img/coin.png'
-import Lightning from '../../img/lightning.png'
+import Coin from '../../assets/img/coin.png'
+import Lightning from '../../assets/img/lightning.png'
 
-import './Balance.css'
+import '../../assets/css/main.css';
 
 const Balance = () => {
     return (
