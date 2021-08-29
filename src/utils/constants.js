@@ -1,6 +1,6 @@
 export const ROUTES = {
-    HOME: 'home',
-    INTRO: 'intro'
+    INTRO: 'intro',
+    PROFILE: 'profile'
 }
 
 export const STORAGE_KEYS = {

@@ -4,7 +4,7 @@ import { View, ScreenSpinner, AdaptivityProvider, AppRoot, Snackbar, Avatar } fr
 import {Icon24Error} from "@vkontakte/icons";
 import '@vkontakte/vkui/dist/vkui.css';
 
-import Home from './panels/Home';
+import Profile from './panels/Profile';
 import Intro from './panels/Intro';
 
 import {ROUTES, STORAGE_KEYS} from './utils/constants'
@@ -41,8 +41,8 @@ const App = () => {
 					switch (key) {
 						case STORAGE_KEYS.STATUS:
 							if (data[key].hasSeenIntro) {
-    							/*setActivePanel(ROUTES.HOME)
-								setUserHasSeenIntro(true)*/
+    							setActivePanel(ROUTES.PROFILE)
+								setUserHasSeenIntro(true)
 							}
 							break
 						default:
@@ -78,7 +78,7 @@ const App = () => {
 				})
 			})
 
-			go(ROUTES.HOME)
+			go(ROUTES.PROFILE)
 		} catch (error) {
 			setSnackbar(<Snackbar
 				layout='vertical'
@@ -94,7 +94,7 @@ const App = () => {
 			<AppRoot>
 				<View activePanel={activePanel} popout={popout}>
 					<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
-					<Home id={ROUTES.HOME} fetchedUser={fetchedUser} go={go} snackbarError={snackbar} />
+					<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
 				</View>
 			</AppRoot>
 		</AdaptivityProvider>
