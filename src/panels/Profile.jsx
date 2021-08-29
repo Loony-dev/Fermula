@@ -11,9 +11,9 @@ import '../assets/libs/carousel/assets/owl.theme.default.min.css';
 
 import Test from '../assets/img/test/test.png'
 import Test2 from '../assets/img/test/test2.png'
-import Test3 from '../assets/img/test/test3.png.png'
-import Test4 from '../assets/img/test/test4.png.png'
-import Test5 from '../assets/img/test/test5.png.png'
+import Test3 from '../assets/img/test/test3.png'
+import Test4 from '../assets/img/test/test4.png'
+import Test5 from '../assets/img/test/test5.png'
 
 const Profile = (id, fetchedUser, go) => {
     return (
