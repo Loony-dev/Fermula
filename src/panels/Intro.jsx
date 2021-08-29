@@ -7,7 +7,7 @@ import '../assets/css/main.css';
 
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => {
     return (
-        <View id={id} separator={false}>
+        <Panel id={id} separator={false}>
             <Header style={{margin: '0 38px 0 0'}} />
             <GameHeader balance={false} />
 
@@ -43,7 +43,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => 
             </main>
 
             {snackbarError}
-        </View>
+        </Panel>
     )
 };
 
