@@ -5,10 +5,6 @@ import GameHeader from "../components/GameHeader"
 
 import '../assets/css/main.css';
 
-import '../assets/libs/carousel/owl.carousel.min';
-import '../assets/libs/carousel/assets/owl.carousel.min.css';
-import '../assets/libs/carousel/assets/owl.theme.default.min.css';
-
 import Test from '../assets/img/test/test.png'
 import Test2 from '../assets/img/test/test2.png'
 import Test3 from '../assets/img/test/test3.png'
