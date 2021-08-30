@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import bridge from '@vkontakte/vk-bridge';
-import { View, ScreenSpinner, AdaptivityProvider, AppRoot, Snackbar, Avatar, ConfigProvider } from '@vkontakte/vkui';
+import {
+	View,
+	ScreenSpinner,
+	AdaptivityProvider,
+	AppRoot,
+	Snackbar,
+	Avatar,
+	ConfigProvider,
+	PanelHeader
+} from '@vkontakte/vkui';
 import {Icon24Error} from "@vkontakte/icons";
 import '@vkontakte/vkui/dist/vkui.css';
 
@@ -86,6 +95,8 @@ const App = () => {
 			<AdaptivityProvider>
 				<AppRoot scroll={null}>
 					<View activePanel={activePanel} popout={popout} header={false}>
+						<PanelHeader id="tempPanelHeader" />
+
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
 						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
 					</View>
