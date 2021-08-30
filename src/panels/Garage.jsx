@@ -2,10 +2,14 @@ import React from 'react';
 import {Card, CardScroll, Panel} from "@vkontakte/vkui";
 
 import GameHeader from "../components/GameHeader";
+import CustomCarouselArrow from "../components/CustomCarouselArrow";
 
-import {ROUTES} from '../utils/constants'
+import {ROUTES, responsive} from '../utils/constants'
 
 import Test7 from '../assets/img/test/test7.png'
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 import '../assets/css/main.css';
 
@@ -17,44 +21,28 @@ const Garage = ({id, go}) => {
             <section className="section">
                 <div className="section-name">Достижения</div>
                 <div className="section-content">
-                    <CardScroll className="owl-carousel owl-products">
-                        <Card>
-                            <div className="card">
-                                <img src={Test7} alt="" className="card-image" />
-                                <div className="card-desc">1 элемент</div>
-                            </div>
-                        </Card>
-                        <Card>
-                            <div className="card">
-                                <img src={Test7} alt="" className="card-image" />
-                                <div className="card-desc">2 элемент</div>
-                            </div>
-                        </Card>
-                        <Card>
-                            <div className="card">
-                                <img src={Test7} alt="" className="card-image" />
-                                <div className="card-desc">3 элемент</div>
-                            </div>
-                        </Card>
-                        <Card>
-                            <div className="card">
-                                <img src={Test7} alt="" className="card-image" />
-                                <div className="card-desc">4 элемент</div>
-                            </div>
-                        </Card>
-                        <Card>
-                            <div className="card">
-                                <img src={Test7} alt="" className="card-image" />
-                                <div className="card-desc">5 элемент</div>
-                            </div>
-                        </Card>
-                        <Card>
-                            <div className="card">
-                                <img src={Test7} alt="" className="card-image" />
-                                <div className="card-desc">5 элемент</div>
-                            </div>
-                        </Card>
-                    </CardScroll>
+                    <Carousel customRightArrow={<CustomCarouselArrow left={false} />} customLeftArrow={<CustomCarouselArrow />} itemClass="card-achievement" responsive={responsive} className="p-30">
+                        <div>
+                            <img src={Test7} alt="" className="card-image" />
+                            <div className="card-desc">1 элемент</div>
+                        </div>
+                        <div>
+                            <img src={Test7} alt="" className="card-image" />
+                            <div className="card-desc">2 элемент</div>
+                        </div>
+                        <div>
+                            <img src={Test7} alt="" className="card-image" />
+                            <div className="card-desc">3 элемент</div>
+                        </div>
+                        <div>
+                            <img src={Test7} alt="" className="card-image" />
+                            <div className="card-desc">4 элемент</div>
+                        </div>
+                        <div>
+                            <img src={Test7} alt="" className="card-image" />
+                            <div className="card-desc">5 элемент</div>
+                        </div>
+                    </Carousel>
                 </div>
             </section>
             <section className="section">
