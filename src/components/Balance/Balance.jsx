@@ -8,6 +8,8 @@ import '../../assets/css/main.css';
 const Balance = () => {
     return (
         <div className="navbar-info">
+            <div className="navbar-balance-bg" />
+
             <div className="navbar-balance">
                 <img src={Coin} alt="coin" />
                 <span>350</span>
