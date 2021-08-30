@@ -8,7 +8,6 @@ import '../assets/css/main.css';
 const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => {
     return (
         <Panel id={id} separator={false}>
-            <Header style={{margin: '0 38px 0 0'}} />
             <GameHeader balance={false} />
 
             <header id="header" className="header">

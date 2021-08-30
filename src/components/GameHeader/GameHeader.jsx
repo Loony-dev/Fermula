@@ -9,7 +9,7 @@ import '../../assets/css/main.css';
 const GameHeader = ({ balance = false }) => {
     return (
         <div>
-            <nav id='navbar' className='navbar'>
+            <nav id='navbar Header--ios' className='navbar Header--ios'>
                 <Logo />
 
                 {(balance) && <Balance />}

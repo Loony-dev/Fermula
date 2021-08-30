@@ -23,7 +23,23 @@
     background-color: #EFF0F3;
     min-height: 35px;
     width: 100%;
-    padding: 0px 25px;
+    padding: 0 25px;
+}
+
+.Header--ios {
+    padding: 0 12px;
+}
+
+.Header--ios .Header__main {
+    margin: 13px 0 9px;
+}
+
+.Header--ios.Header--mode-secondary .Header__main {
+    margin: 14px 0 10px;
+}
+
+.Header--ios.Header--mode-tertiary .Header__main {
+    margin-top: 9px;
 }
 
 .navbar::before {
