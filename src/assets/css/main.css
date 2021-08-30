@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     font-family: 'TT Norms Regular', serif;
-    overflow-x: hidden;
 }
 
 .gameHeader {
@@ -21,6 +20,7 @@
     width: 100%;
     padding: 0 25px;
     margin-top: calc(50px * 0.7); /*var(--safe-area-inset-top)*/
+    overflow-x: hidden;
 }
 
 .navbar::before {
@@ -34,7 +34,6 @@
     transform: skew(-20deg);
     left: -10px;
     z-index: 1;
-    overflow: hidden;
 }
 
 .navbar-logo {
