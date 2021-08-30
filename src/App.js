@@ -12,7 +12,7 @@ import {ROUTES, STORAGE_KEYS} from './utils/constants'
 import './assets/fonts/TTNorms/stylesheet.css'
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState(ROUTES.PROFILE);
+	const [activePanel, setActivePanel] = useState(ROUTES.INTRO);
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	const [userHasSeenIntro, setUserHasSeenIntro] = useState(false);

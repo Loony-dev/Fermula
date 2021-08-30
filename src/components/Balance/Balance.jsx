@@ -12,9 +12,14 @@ const Balance = () => {
                 <img src={Coin} alt="coin" />
                 <span>350</span>
             </div>
+
             <div className="navbar-energy">
                 <img src={Lightning} alt="lightning" />
-                <span>350</span>
+                <span>50/100</span>
+            </div>
+
+            <div className="navbar-energy">
+                <span>Уровень: 1</span>
             </div>
         </div>
     )

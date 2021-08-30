@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Header} from '@vkontakte/vkui';
+import {Panel, Header} from '@vkontakte/vkui';
 
 import GameHeader from "../components/GameHeader"
 

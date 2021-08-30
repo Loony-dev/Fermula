@@ -25,32 +25,32 @@ const Profile = (id, fetchedUser, go) => {
                 <section className="section">
                     <div className="section-name">Ваши детали</div>
                     <div className="section-content">
-                        <CardScroll className="owl-carousel owl-products">
-                            <Card className="card">
+                        <CardScroll size="s" className="owl-carousel owl-products">
+                            <Card className="inventoryCard">
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">1 элемент</div>
                                 </div>
                             </Card>
-                            <Card className="card">
+                            <Card>
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">2 элемент</div>
                                 </div>
                             </Card>
-                            <Card className="card">
+                            <Card>
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">3 элемент</div>
                                 </div>
                             </Card>
-                            <Card className="card">
+                            <Card>
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">4 элемент</div>
                                 </div>
                             </Card>
-                            <Card className="card">
+                            <Card>
                                 <div className="card">
                                     <img src={Test} alt="" className="card-image"/>
                                     <div className="card-desc">5 элемент</div>

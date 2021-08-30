@@ -8,11 +8,17 @@ import '../../assets/css/main.css';
 
 const GameHeader = ({ balance = false }) => {
     return (
-        <nav id='navbar' className='navbar'>
-            <Logo />
+        <div>
+            <nav id='navbar' className='navbar'>
+                <Logo />
 
-            {(balance) && <Balance />}
-        </nav>
+                {(balance) && <Balance />}
+            </nav>
+
+            <div className="header-level">
+                <div className="header-level-progress" style={{width: '0%'}} />
+            </div>
+        </div>
     )
 }
 
