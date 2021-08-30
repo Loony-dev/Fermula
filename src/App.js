@@ -15,6 +15,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Profile from './panels/Profile';
 import Intro from './panels/Intro';
+import Menu from './panels/Menu';
 
 import {ROUTES, STORAGE_KEYS} from './utils/constants'
 
@@ -71,6 +72,10 @@ const App = () => {
 		setActivePanel(panel);
 	};
 
+	const toMenu = () => {
+		setActivePanel(ROUTES.MENU);
+	};
+
 	const viewIntro = async function () {
 		try {
 			await bridge.send('VKWebAppStorageSet', {
@@ -97,7 +102,8 @@ const App = () => {
 				<AppRoot>
 					<View activePanel={activePanel} popout={popout} header={false}>
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
-						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
+						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={toMenu}/>
+						<Menu id={ROUTES.MENU} fetchedUser={fetchedUser} go={go}/>
 					</View>
 				</AppRoot>
 			</AdaptivityProvider>

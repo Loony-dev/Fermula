@@ -3,6 +3,8 @@ import {Header, View, CardScroll, Card, Panel} from '@vkontakte/vkui';
 
 import GameHeader from "../components/GameHeader"
 
+import {ROUTES} from '../utils/constants'
+
 import '../assets/css/main.css';
 
 import Test from '../assets/img/test/test.png'
@@ -131,7 +133,7 @@ const Profile = (id, fetchedUser, go) => {
                                     </div>
                                 </Card>
                             </CardScroll >
-                            <a href="#" className="buttons-primary w-50 mt d-block mx-auto"><span>Магазин</span></a>
+                            <button type="button" onClick={go} className="buttons-primary w-50 mt d-block mx-auto"><span>Меню</span></button>
                         </div>
                     </section>
                 </main>
