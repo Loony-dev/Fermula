@@ -7,7 +7,7 @@
 }
 
 .gameHeader {
-    background-color: #EFF0F3;
+    background-color: #797979;
 }
 
 .navbar {
@@ -19,7 +19,8 @@
     min-height: 35px;
     width: 100%;
     padding: 0 25px;
-    margin-top: calc(var(--safe-area-inset-top) * 0.8);
+    margin-top: calc(var(--safe-area-inset-top) * 0.7);
+    background-color: #EFF0F3;
 }
 
 .navbar::before {
