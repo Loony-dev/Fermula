@@ -14,7 +14,6 @@ import Test5 from '../assets/img/test/test5.png'
 const Profile = (id, fetchedUser, go) => {
     return (
         <Panel id={id}>
-            <Header style={{margin: '0 38px 0 0'}} />
             <GameHeader balance={true} />
 
             <header id="header" className="header">

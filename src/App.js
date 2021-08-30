@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import bridge from '@vkontakte/vk-bridge';
-import { View, ScreenSpinner, AdaptivityProvider, AppRoot, Snackbar, Avatar } from '@vkontakte/vkui';
+import { View, ScreenSpinner, AdaptivityProvider, AppRoot, Snackbar, Avatar, ConfigProvider } from '@vkontakte/vkui';
 import {Icon24Error} from "@vkontakte/icons";
 import '@vkontakte/vkui/dist/vkui.css';
 
@@ -22,7 +22,7 @@ const App = () => {
 		bridge.subscribe(({ detail: { type, data }}) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
-				schemeAttribute.value = 'space_gray';
+				schemeAttribute.value = 'bright_light';
 				document.body.attributes.setNamedItem(schemeAttribute);
 			}
 		});
@@ -90,14 +90,16 @@ const App = () => {
 	}
 
 	return (
-		<AdaptivityProvider>
-			<AppRoot scroll={null}>
-				<View activePanel={activePanel} popout={popout}>
-					<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
-					<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
-				</View>
-			</AppRoot>
-		</AdaptivityProvider>
+		<ConfigProvider platform="ios" scheme="bright_light">
+			<AdaptivityProvider>
+				<AppRoot scroll={null}>
+					<View activePanel={activePanel} popout={popout}>
+						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
+						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
+					</View>
+				</AppRoot>
+			</AdaptivityProvider>
+		</ConfigProvider>
 	);
 }
 
