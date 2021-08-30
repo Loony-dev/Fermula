@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import bridge from '@vkontakte/vk-bridge';
 import {
 	View,
@@ -96,7 +96,7 @@ const App = () => {
 		<ConfigProvider scheme="bright_light">
 			<AdaptivityProvider>
 				<AppRoot>
-					<View activePanel={activePanel} popout={popout} header={false}>
+					<View activePanel={activePanel} popout={popout}>
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
 						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
 						<Menu id={ROUTES.MENU} fetchedUser={fetchedUser} go={go}/>

@@ -133,7 +133,7 @@ const Profile = ({id, fetchedUser, go}) => {
                                     </div>
                                 </Card>
                             </CardScroll >
-                            <a onClick={go(ROUTES.MENU)} className="buttons-primary w-50 mt d-block mx-auto"><span>Меню</span></a>
+                            <button onClick={go(ROUTES.MENU)} className="buttons-primary w-50 mt d-block mx-auto"><span>Меню</span></button>
                         </div>
                     </section>
                 </main>
