@@ -4,10 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: 'TT Norms Regular', serif;
-}
-
-.gameHeader {
-    background-color: #EFF0F3;
+    overflow: hidden;
 }
 
 .navbar {
@@ -19,6 +16,7 @@
     min-height: 35px;
     width: 100%;
     padding: 0 25px;
+    background-color: #EFF0F3;
     margin-top: calc(var(--safe-area-inset-top) * 0.7);
 }
 
@@ -46,6 +44,7 @@
     display: flex;
     justify-content: space-between;
     min-height: 35px;
+    overflow: visible;
 }
 
 .navbar-info::before {
@@ -553,7 +552,7 @@ background-color: #FF8E3C !important;
 .header-level {
     width: 100%;
     height: 3px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.4);
     overflow: hidden;
 }
 
