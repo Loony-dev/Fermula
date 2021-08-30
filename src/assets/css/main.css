@@ -8,7 +8,6 @@
 
 .gameHeader {
     background-color: #EFF0F3;
-    padding-top: var(--safe-area-inset-top);
 }
 
 .navbar {
@@ -19,8 +18,7 @@
     align-items: center;
     min-height: 35px;
     width: 100%;
-    padding: 0 25px;
-    top: var(--safe-area-inset-top)
+    padding: var(--safe-area-inset-top) 25px 0 25px;
 }
 
 .navbar::before {
