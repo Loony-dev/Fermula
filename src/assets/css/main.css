@@ -51,13 +51,13 @@
 .navbar-info::before {
     position: absolute;
     content: '';
-    width: 250px;
+    width: 220px;
     height: 300%;
     top: -200%;
     background: rgba(0.0, 0.0, 0.0, 0.1);
     border-radius: 3px;
     transform: skew(-20deg);
-    right: -65px;
+    right: -40px;
     z-index: 1;
 }
 
