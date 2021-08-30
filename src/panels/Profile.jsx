@@ -27,7 +27,7 @@ const Profile = ({id, fetchedUser, go}) => {
                     <section className="section">
                         <div className="section-name">Ваши детали</div>
                         <div className="section-content">
-                            <CardScroll size="s" className="owl-carousel owl-products">
+                            <CardScroll className="owl-carousel owl-products">
                                 <Card className="inventoryCard">
                                     <div className="card">
                                         <img src={Test} alt="" className="card-image"/>
@@ -64,7 +64,7 @@ const Profile = ({id, fetchedUser, go}) => {
                     <section className="section">
                         <div className="section-name">Ваши материалы</div>
                         <div className="section-content">
-                            <CardScroll  className="owl-carousel owl-products">
+                            <CardScroll className="owl-carousel owl-products">
                                 <Card>
                                     <div className="card">
                                         <img src={Test2} alt="" className="card-image"/>

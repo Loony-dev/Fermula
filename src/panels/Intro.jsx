@@ -17,7 +17,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => 
                 </div>
             </header>
 
-            <main id="main" className="main">
+            <main id="main" style={{paddingLeft: '30px', paddingRight: '30px'}} className="main">
                 <div className="row">
                     <div className="col-6">
                         <button onClick={viewHome} className="buttons-primary w-100"><span>Начать игру</span></button>
