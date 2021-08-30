@@ -7,7 +7,7 @@
 }
 
 .gameHeader {
-    top: var(--safe-area-inset-top)
+    margin-top: var(--safe-area-inset-top);
 }
 
 .navbar {
