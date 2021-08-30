@@ -13,7 +13,7 @@ import Test3 from '../assets/img/test/test3.png'
 import Test4 from '../assets/img/test/test4.png'
 import Test5 from '../assets/img/test/test5.png'
 
-const Profile = (id, fetchedUser, go) => {
+const Profile = ({id, fetchedUser, go}) => {
     return (
         <Panel id={id}>
             <div style={{overflow: 'hidden'}}>
@@ -133,7 +133,7 @@ const Profile = (id, fetchedUser, go) => {
                                     </div>
                                 </Card>
                             </CardScroll >
-                            <button type="button" onClick={go} className="buttons-primary w-50 mt d-block mx-auto"><span>Меню</span></button>
+                            <a onClick={go(ROUTES.MENU)} className="buttons-primary w-50 mt d-block mx-auto"><span>Меню</span></a>
                         </div>
                     </section>
                 </main>

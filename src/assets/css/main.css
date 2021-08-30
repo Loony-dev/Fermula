@@ -212,6 +212,7 @@
     -ms-transform: skew(-10deg);
     transform: skew(-10deg);
     border-radius: 3px;
+    overflow: visible;
 }
 
 .buttons-primary:hover {
