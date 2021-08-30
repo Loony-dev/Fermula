@@ -9,7 +9,7 @@ import {PanelHeader} from "@vkontakte/vkui";
 
 const GameHeader = ({ balance = false }) => {
     return (
-        <PanelHeader>
+        <div>
             <nav id='navbar' className='navbar'>
                 <Logo />
 
@@ -19,7 +19,7 @@ const GameHeader = ({ balance = false }) => {
             <div className="header-level">
                 <div className="header-level-progress" style={{width: '0%'}} />
             </div>
-        </PanelHeader>
+        </div>
     )
 }
 
