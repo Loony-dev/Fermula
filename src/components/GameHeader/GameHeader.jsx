@@ -17,8 +17,7 @@ const GameHeader = ({ balance = false }) => {
 
     return (
         <div>
-            {isAndroid && <div style={{marginTop: 'var(--panelheader_height_android)'}} />}
-            {isIOS && <div style={{marginTop: 'var(--panelheader_height_ios)'}} />}
+            <div style={{marginTop: 'var(--safe-area-inset-top)'}} />
 
             <nav id='navbar' className='navbar' >
                 <Logo />
