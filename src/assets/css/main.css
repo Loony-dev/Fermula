@@ -21,6 +21,7 @@
     width: 100%;
     padding: 0 25px;
     margin-top: calc(var(--safe-area-inset-top) * 0.7);
+    overflow: visible;
 }
 
 .navbar::before {
