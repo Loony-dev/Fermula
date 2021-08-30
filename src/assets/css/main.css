@@ -59,7 +59,7 @@
     transform: skew(-20deg);
     right: -60px;
     z-index: 1;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .navbar-balance,
