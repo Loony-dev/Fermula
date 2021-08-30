@@ -194,7 +194,8 @@
 }
 
 .main {
-    padding: 30px 30px;
+    padding: 30px 10px;
+    height: calc(100% - 10%);
 }
 
 .buttons-primary {
