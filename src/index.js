@@ -7,6 +7,4 @@ import App from "./App";
 bridge.send("VKWebAppInit").then(() => {});
 
 ReactDOM.render(<App />, document.getElementById("root"));
-if (process.env.NODE_ENV === "development") {
-  import("./eruda").then(() => {}); //runtime download
-}
+import("./eruda").then(() => {}); //runtime download
