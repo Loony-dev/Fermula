@@ -13,7 +13,7 @@ import Test5 from '../assets/img/test/test5.png'
 
 const Profile = (id, fetchedUser, go) => {
     return (
-        <div id={id}>
+        <Panel id={id}>
             <Header style={{margin: '0 38px 0 0'}} />
             <GameHeader balance={true} />
 
@@ -135,7 +135,7 @@ const Profile = (id, fetchedUser, go) => {
                     </div>
                 </section>
             </main>
-        </div>
+        </Panel>
     )
 }
 

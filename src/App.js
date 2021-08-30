@@ -91,7 +91,7 @@ const App = () => {
 
 	return (
 		<AdaptivityProvider>
-			<AppRoot>
+			<AppRoot scroll={null}>
 				<View activePanel={activePanel} popout={popout}>
 					<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
 					<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
