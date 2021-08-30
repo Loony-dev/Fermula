@@ -10,6 +10,8 @@ import {PanelHeader} from "@vkontakte/vkui";
 const GameHeader = ({ balance = false }) => {
     return (
         <div>
+            <PanelHeader style={{width: 0, height: 0}}/>
+
             <nav id='navbar' className='navbar'>
                 <Logo />
 
