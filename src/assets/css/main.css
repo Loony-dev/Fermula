@@ -8,22 +8,15 @@
 
 .navbar {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     flex-flow: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     background-color: #EFF0F3;
     min-height: 35px;
     width: 100%;
     padding: 0 25px;
+    top: var(--safe-area-inset-top)
 }
 
 .navbar::before {
@@ -33,11 +26,8 @@
     height: 100%;
     background: #FF8E3C;
     border-radius: 3px;
-    -webkit-transform: skew(-20deg);
-    -ms-transform: skew(-20deg);
     transform: skew(-20deg);
     left: -10px;
-    top: 0;
     z-index: 1;
 }
 
@@ -48,21 +38,13 @@
 }
 
 .navbar-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .navbar-balance,
 .navbar-energy {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin: 0 5px;
 }

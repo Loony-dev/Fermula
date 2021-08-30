@@ -17,8 +17,6 @@ const GameHeader = ({ balance = false }) => {
 
     return (
         <div>
-            <div style={{marginTop: 'var(--safe-area-inset-top)'}} />
-
             <nav id='navbar' className='navbar' >
                 <Logo />
 
