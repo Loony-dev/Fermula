@@ -26,22 +26,6 @@
     padding: 0 25px;
 }
 
-.Header--ios {
-    padding: 0 12px;
-}
-
-.Header--ios .Header__main {
-    margin: 13px 0 9px;
-}
-
-.Header--ios.Header--mode-secondary .Header__main {
-    margin: 14px 0 10px;
-}
-
-.Header--ios.Header--mode-tertiary .Header__main {
-    margin-top: 9px;
-}
-
 .navbar::before {
     position: absolute;
     content: '';
