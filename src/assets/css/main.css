@@ -6,6 +6,10 @@
     font-family: 'TT Norms Regular', serif;
 }
 
+.root {
+    background-color: #0D0D0D;
+}
+
 .gameHeader {
     margin-top: var(--safe-area-inset-top);
 }
