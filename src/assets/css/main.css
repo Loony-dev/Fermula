@@ -51,14 +51,15 @@
 .navbar-info::before {
     position: absolute;
     content: '';
-    width: 220px;
+    width: 250px;
     height: 300%;
     top: -200%;
     background: rgba(0.0, 0.0, 0.0, 0.1);
     border-radius: 3px;
     transform: skew(-20deg);
-    right: -40px;
+    right: -60px;
     z-index: 1;
+    overflow: hidden
 }
 
 .navbar-balance,
