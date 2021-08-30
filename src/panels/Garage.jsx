@@ -17,7 +17,7 @@ const Garage = ({id, go}) => {
             <section className="section">
                 <div className="section-name">Достижения</div>
                 <div className="section-content">
-                    <CardScroll className="overflow owl-carousel owl-products">
+                    <CardScroll className="owl-carousel owl-products">
                         <Card>
                             <div className="card">
                                 <img src={Test7} alt="" className="card-image" />
