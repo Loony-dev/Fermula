@@ -6,12 +6,9 @@
     font-family: 'TT Norms Regular', serif;
 }
 
-.root {
-    background-color: #0D0D0D;
-}
-
 .gameHeader {
-    margin-top: var(--safe-area-inset-top);
+    background-color: #EFF0F3;
+    padding-top: var(--safe-area-inset-top);
 }
 
 .navbar {
@@ -20,10 +17,10 @@
     justify-content: space-between;
     flex-flow: row;
     align-items: center;
-    background-color: #EFF0F3;
     min-height: 35px;
     width: 100%;
     padding: 0 25px;
+    top: var(--safe-area-inset-top)
 }
 
 .navbar::before {

@@ -28,15 +28,6 @@ const App = () => {
 	const [snackbar, setSnackbar] = useState(false);
 
 	useEffect(() => {
-		bridge.subscribe(({ detail: { type, data }}) => {
-			if (type === 'VKWebAppUpdateConfig') {
-				const schemeAttribute = document.createAttribute('scheme');
-				schemeAttribute.value = 'bright_light';
-
-				document.body.attributes.setNamedItem(schemeAttribute);
-			}
-		});
-
 		async function fetchData() {
 			const user = await bridge.send('VKWebAppGetUserInfo');
 			const storageData = await bridge.send('VKWebAppStorageGet', {
