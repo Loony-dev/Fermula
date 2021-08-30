@@ -7,6 +7,10 @@
     overflow: hidden;
 }
 
+.gameHeader {
+    background-color: #EFF0F3;
+}
+
 .navbar {
     position: relative;
     display: flex;
@@ -16,7 +20,6 @@
     min-height: 35px;
     width: 100%;
     padding: 0 25px;
-    background-color: #EFF0F3;
     margin-top: calc(var(--safe-area-inset-top) * 0.7);
 }
 
