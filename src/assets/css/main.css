@@ -19,8 +19,7 @@
     min-height: 35px;
     width: 100%;
     padding: 0 25px;
-    margin-top: calc(var(--safe-area-inset-top) * 0.7);
-    overflow: hidden;
+    margin-top: calc(50px * 0.7); /*var(--safe-area-inset-top)*/
 }
 
 .navbar::before {
@@ -34,6 +33,7 @@
     transform: skew(-20deg);
     left: -10px;
     z-index: 1;
+    overflow: hidden;
 }
 
 .navbar-logo {
@@ -61,6 +61,7 @@
     transform: skew(-20deg);
     right: -60px;
     z-index: 1;
+    overflow: hidden;
 }
 
 .navbar-balance,
