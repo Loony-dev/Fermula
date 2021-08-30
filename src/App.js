@@ -19,6 +19,7 @@ import Intro from './panels/Intro';
 import {ROUTES, STORAGE_KEYS} from './utils/constants'
 
 import './assets/fonts/TTNorms/stylesheet.css'
+import {hidden} from "chalk";
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState(ROUTES.INTRO);
@@ -94,7 +95,7 @@ const App = () => {
 		<ConfigProvider scheme="bright_light">
 			<AdaptivityProvider>
 				<AppRoot scroll={null}>
-					<View activePanel={activePanel} popout={popout} header={false}>
+					<View style={{overflow: hidden}} activePanel={activePanel} popout={popout} header={false}>
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
 						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
 					</View>
