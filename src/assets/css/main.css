@@ -21,7 +21,6 @@
     width: 100%;
     padding: 0 25px;
     margin-top: calc(var(--safe-area-inset-top) * 0.7);
-    overflow: visible;
 }
 
 .navbar::before {
@@ -179,6 +178,10 @@
     width: 75% !important;
 }
 
+.p-30 {
+    padding: 0 30px;
+}
+
 .d-block {
     display: block;
 }
@@ -208,7 +211,6 @@
     padding: 13px 24px;
     transform: skew(-10deg);
     border-radius: 3px;
-    overflow: visible;
 }
 
 .buttons-primary:hover {
@@ -321,6 +323,10 @@
     font-size: 12px;
 }
 
+.overflow {
+    overflow: visible;
+}
+
 .owl-products .owl-nav {
     display: flex !important;
     justify-content: space-between;
@@ -350,7 +356,6 @@
 .owl-products .owl-carousel {
     position: relative;
     max-height: 100px !important;
-    overflow: hidden;
 }
 
 .shopping-item {

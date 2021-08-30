@@ -7,8 +7,7 @@ import {
 	AppRoot,
 	Snackbar,
 	Avatar,
-	ConfigProvider,
-	PanelHeader
+	ConfigProvider
 } from '@vkontakte/vkui';
 import {Icon24Error} from "@vkontakte/icons";
 import '@vkontakte/vkui/dist/vkui.css';
@@ -16,6 +15,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Profile from './panels/Profile';
 import Intro from './panels/Intro';
 import Menu from './panels/Menu';
+import Garage from './panels/Garage';
 
 import {ROUTES, STORAGE_KEYS} from './utils/constants'
 
@@ -100,6 +100,7 @@ const App = () => {
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
 						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
 						<Menu id={ROUTES.MENU} go={go}/>
+						<Garage id={ROUTES.GARAGE} go={go}/>
 					</View>
 				</AppRoot>
 			</AdaptivityProvider>

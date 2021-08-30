@@ -17,7 +17,7 @@ const Menu = ({id, go}) => {
             </header>
 
             <a onClick={go} data-to={ROUTES.PROFILE} className="buttons-light d-block w-75 mx-auto mt">Профиль</a>
-            <a onClick={go} data-to={ROUTES.PROFILE} className="buttons-light d-block w-75 mx-auto mt">Гараж</a>
+            <a onClick={go} data-to={ROUTES.GARAGE} className="buttons-light d-block w-75 mx-auto mt">Гараж</a>
             <a onClick={go} data-to={ROUTES.PROFILE} className="buttons-light d-block w-75 mx-auto mt">Магазин</a>
             <a onClick={go} data-to={ROUTES.INTRO} className="buttons-light d-block w-75 mx-auto mt">Топ игроков</a>
         </Panel>
