@@ -5,11 +5,11 @@ import Logo from '../Logo/index'
 import Balance from '../Balance/index'
 
 import '../../assets/css/main.css';
-import {Header} from "@vkontakte/vkui";
+import {PanelHeader} from "@vkontakte/vkui";
 
 const GameHeader = ({ balance = false }) => {
     return (
-        <Header>
+        <PanelHeader>
             <nav id='navbar' className='navbar'>
                 <Logo />
 
@@ -19,7 +19,7 @@ const GameHeader = ({ balance = false }) => {
             <div className="header-level">
                 <div className="header-level-progress" style={{width: '0%'}} />
             </div>
-        </Header>
+        </PanelHeader>
     )
 }
 
