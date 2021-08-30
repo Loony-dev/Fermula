@@ -13,7 +13,7 @@ import Test5 from '../assets/img/test/test5.png'
 
 const Profile = (id, fetchedUser, go) => {
     return (
-        <Panel id={id}>
+        <Panel id={id} style={{overflow: 'hidden'}}>
             <div style={{overflow: 'hidden'}}>
                 <GameHeader balance={true} />
 
