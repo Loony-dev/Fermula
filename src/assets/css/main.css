@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: 'TT Norms Regular', serif;
+    overflow: hidden;
 }
 
 .gameHeader {
@@ -326,7 +327,7 @@
     height: 30px;
     left: 30px;
     background: #FF8E3C url('../img/arror.svg') no-repeat center;
-    background-size: 20px;
+    background-size: 17px;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
     transform: rotate(180deg);
@@ -338,7 +339,7 @@
     height: 30px;
     right: 30px;
     background: #FF8E3C url('../img/arror.svg') no-repeat center;
-    background-size: 20px;
+    background-size: 17px;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 }
