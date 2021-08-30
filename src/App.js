@@ -44,7 +44,7 @@ const App = () => {
 					switch (key) {
 						case STORAGE_KEYS.STATUS:
 							if (data[key].hasSeenIntro) {
-    							setActivePanel(ROUTES.PROFILE)
+    							setActivePanel(ROUTES.MENU)
 								setUserHasSeenIntro(true)
 							}
 							break
@@ -76,6 +76,10 @@ const App = () => {
 		setActivePanel(ROUTES.MENU);
 	};
 
+	const toProfile = () => {
+		setActivePanel(ROUTES.PROFILE);
+	};
+
 	const viewIntro = async function () {
 		try {
 			await bridge.send('VKWebAppStorageSet', {
@@ -85,7 +89,7 @@ const App = () => {
 				})
 			})
 
-			go(ROUTES.PROFILE)
+			go(ROUTES.MENU)
 		} catch (error) {
 			setSnackbar(<Snackbar
 				layout='vertical'
@@ -103,7 +107,7 @@ const App = () => {
 					<View activePanel={activePanel} popout={popout} header={false}>
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
 						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={toMenu}/>
-						<Menu id={ROUTES.MENU} fetchedUser={fetchedUser} go={go}/>
+						<Menu id={ROUTES.MENU} fetchedUser={fetchedUser} go={toProfile}/>
 					</View>
 				</AppRoot>
 			</AdaptivityProvider>

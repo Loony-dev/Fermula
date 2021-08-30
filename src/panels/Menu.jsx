@@ -1,18 +1,22 @@
 import React from 'react';
-import {Panel} from "@vkontakte/vkui";
+import {Button, Panel} from "@vkontakte/vkui";
 
 import '../assets/css/main.css';
+import GameHeader from "../components/GameHeader";
 
 const Menu = (id, fetchedUser, go) => {
     return (
         <Panel id={id}>
-            <a className="buttons-light d-block w-75 mx-auto mt">Профиль</a>
-            <a className="buttons-light d-block w-75 mx-auto mt">Гараж</a>
-            <a className="buttons-light d-block w-75 mx-auto mt">Магазин</a>
-            <a className="buttons-light d-block w-75 mx-auto mt">Топ игроков</a>
-            <form action data-operation="logout">
-                <button type="button" className="buttons-light d-block w-75 mx-auto mt">Выйти</button>
-            </form>
+            <GameHeader balance={true} />
+
+            <header id="header" className="header">
+                <div className="page-name">Меню</div>
+            </header>
+
+            <Button onClick={go} type="button" className="buttons-light d-block w-75 mx-auto mt">Профиль</Button>
+            <Button className="buttons-light d-block w-75 mx-auto mt">Гараж</Button>
+            <Button className="buttons-light d-block w-75 mx-auto mt">Магазин</Button>
+            <Button className="buttons-light d-block w-75 mx-auto mt">Топ игроков</Button>
         </Panel>
     )
 }
