@@ -22,7 +22,7 @@ const App = () => {
 		bridge.subscribe(({ detail: { type, data }}) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
-				schemeAttribute.value = 'client_light';
+				schemeAttribute.value = 'space_gray';
 				document.body.attributes.setNamedItem(schemeAttribute);
 			}
 		});
