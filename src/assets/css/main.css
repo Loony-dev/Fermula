@@ -162,8 +162,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     width: 46%;
     margin: 0 2%;
@@ -208,8 +206,6 @@
     border: none;
     text-decoration: none;
     padding: 13px 24px;
-    -webkit-transform: skew(-10deg);
-    -ms-transform: skew(-10deg);
     transform: skew(-10deg);
     border-radius: 3px;
     overflow: visible;
