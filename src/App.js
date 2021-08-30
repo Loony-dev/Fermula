@@ -68,8 +68,8 @@ const App = () => {
 		fetchData().then(() => {});
 	}, []);
 
-	const go = (panel) => {
-		setActivePanel(panel);
+	const go = e => {
+		setActivePanel(e.currentTarget.dataset.to);
 	};
 
 	const viewIntro = async function () {
@@ -81,7 +81,7 @@ const App = () => {
 				})
 			})
 
-			go(ROUTES.MENU)
+			setActivePanel(ROUTES.MENU)
 		} catch (error) {
 			setSnackbar(<Snackbar
 				layout='vertical'
@@ -99,7 +99,7 @@ const App = () => {
 					<View activePanel={activePanel} popout={popout}>
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
 						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
-						<Menu id={ROUTES.MENU} fetchedUser={fetchedUser} go={go}/>
+						<Menu id={ROUTES.MENU} go={go}/>
 					</View>
 				</AppRoot>
 			</AdaptivityProvider>

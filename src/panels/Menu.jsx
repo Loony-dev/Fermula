@@ -7,7 +7,7 @@ import {ROUTES} from '../utils/constants'
 
 import '../assets/css/main.css';
 
-const Menu = ({id, fetchedUser, go}) => {
+const Menu = ({id, go}) => {
     return (
         <Panel id={id}>
             <GameHeader balance={true} />
@@ -16,10 +16,10 @@ const Menu = ({id, fetchedUser, go}) => {
                 <div className="page-name">Меню</div>
             </header>
 
-            <button onClick={go(ROUTES.PROFILE)} className="buttons-light d-block w-75 mx-auto mt">Профиль</button>
-            <button onClick={go(ROUTES.PROFILE)} className="buttons-light d-block w-75 mx-auto mt">Гараж</button>
-            <button onClick={go(ROUTES.PROFILE)} className="buttons-light d-block w-75 mx-auto mt">Магазин</button>
-            <button onClick={go(ROUTES.PROFILE)} className="buttons-light d-block w-75 mx-auto mt">Топ игроков</button>
+            <a onClick={go} data-to={ROUTES.PROFILE} className="buttons-light d-block w-75 mx-auto mt">Профиль</a>
+            <a onClick={go} data-to={ROUTES.PROFILE} className="buttons-light d-block w-75 mx-auto mt">Гараж</a>
+            <a onClick={go} data-to={ROUTES.PROFILE} className="buttons-light d-block w-75 mx-auto mt">Магазин</a>
+            <a onClick={go} data-to={ROUTES.INTRO} className="buttons-light d-block w-75 mx-auto mt">Топ игроков</a>
         </Panel>
     )
 }
