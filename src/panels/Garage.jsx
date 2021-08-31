@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardScroll, Panel} from "@vkontakte/vkui";
+import {Panel} from "@vkontakte/vkui";
 
 import GameHeader from "../components/GameHeader";
 import CustomCarouselArrow from "../components/CustomCarouselArrow";
