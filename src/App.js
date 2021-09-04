@@ -1,15 +1,12 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import bridge from '@vkontakte/vk-bridge';
 import {
 	View,
 	ScreenSpinner,
 	AdaptivityProvider,
 	AppRoot,
-	Snackbar,
-	Avatar,
 	ConfigProvider
 } from '@vkontakte/vkui';
-import {Icon24Error} from "@vkontakte/icons";
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Profile from './panels/Profile';
@@ -17,51 +14,33 @@ import Intro from './panels/Intro';
 import Menu from './panels/Menu';
 import Garage from './panels/Garage';
 
-import {ROUTES, STORAGE_KEYS} from './utils/constants'
+import User from './models/user.model'
+
+import {ROUTES} from './utils/constants'
 
 import './assets/fonts/TTNorms/stylesheet.css'
-import {hidden} from "chalk";
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState(ROUTES.INTRO);
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
-	const [userHasSeenIntro, setUserHasSeenIntro] = useState(false);
-	const [snackbar, setSnackbar] = useState(false);
+
+	let user = null;
 
 	useEffect(() => {
 		async function fetchData() {
-			const user = await bridge.send('VKWebAppGetUserInfo');
-			const storageData = await bridge.send('VKWebAppStorageGet', {
-				keys: Object.values(STORAGE_KEYS)
-			});
-			const data = {};
+			const userInfo = await bridge.send('VKWebAppGetUserInfo');
 
-			storageData.keys.forEach(({key, value}) => {
-				try {
-					data[key] = value ? JSON.parse(value) : {}
+			user = new User(userInfo.id)
 
-					switch (key) {
-						case STORAGE_KEYS.STATUS:
-							if (data[key].hasSeenIntro) {
-    							setActivePanel(ROUTES.MENU)
-								setUserHasSeenIntro(true)
-							}
-							break
-						default:
-							break
-					}
-				} catch (error) {
-					setSnackbar(<Snackbar
-						layout='vertical'
-						onClose={() => setSnackbar(null)}
-						before={<Avatar size={24} style={{backgroundColor: 'var(--dynamic-red)'}}><Icon24Error fill='#fff' width='14' height='14' /></Avatar>}
-						duration={900}
-					>Проблема с получением данных из Storage</Snackbar>)
-				}
-			})
+			if (!user.check())
+				user.create()
+			else {
+				user.load()
+				go(ROUTES.MENU)
+			}
 
-			setUser(user);
+			setUser(userInfo);
 			setPopout(null);
 		}
 
@@ -72,24 +51,9 @@ const App = () => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
 
-	const viewIntro = async function () {
-		try {
-			await bridge.send('VKWebAppStorageSet', {
-				key: STORAGE_KEYS.STATUS,
-				value: JSON.stringify({
-					hasSeenIntro: true
-				})
-			})
-
-			setActivePanel(ROUTES.MENU)
-		} catch (error) {
-			setSnackbar(<Snackbar
-				layout='vertical'
-				onClose={() => setSnackbar(null)}
-				before={<Avatar size={24} style={{backgroundColor: 'var(--dynamic-red)'}}><Icon24Error fill='#fff' width='14' height='14' /></Avatar>}
-				duration={900}
-			>Проблема с отпарвкой данных в Storage</Snackbar>)
-		}
+	const startGame = () => {
+		// -- TODO - Set has_seen_intro = true
+		go(ROUTES.MENU)
 	}
 
 	return (
@@ -97,10 +61,10 @@ const App = () => {
 			<AdaptivityProvider>
 				<AppRoot>
 					<View activePanel={activePanel} popout={popout}>
-						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} viewHome={viewIntro} snackbarError={snackbar} userHasSeenIntro={userHasSeenIntro} />
-						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go}/>
+						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} startGame={startGame} />
+						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go} user={user}/>
 						<Menu id={ROUTES.MENU} go={go}/>
-						<Garage id={ROUTES.GARAGE} go={go}/>
+						<Garage id={ROUTES.GARAGE} go={go} user={user}/>
 					</View>
 				</AppRoot>
 			</AdaptivityProvider>

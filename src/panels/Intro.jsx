@@ -5,7 +5,7 @@ import GameHeader from "../components/GameHeader"
 
 import '../assets/css/main.css';
 
-const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => {
+const Intro = ({id, fetchedUser, startGame}) => {
     return (
         <Panel id={id}>
             <GameHeader balance={false} />
@@ -20,7 +20,7 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => 
             <main id="main" style={{paddingLeft: '30px', paddingRight: '30px'}} className="main">
                 <div className="row">
                     <div className="col-6">
-                        <button onClick={viewHome} className="buttons-primary"><span>Начать игру</span></button>
+                        <button onClick={startGame} className="buttons-primary"><span>Начать игру</span></button>
                     </div>
                 </div>
 
@@ -40,8 +40,6 @@ const Intro = ({id, snackbarError, fetchedUser, userHasSeenIntro, viewHome}) => 
                     </div>
                 </div>
             </main>
-
-            {snackbarError}
         </Panel>
     )
 };
