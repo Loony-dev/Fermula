@@ -23,7 +23,7 @@ import './assets/fonts/TTNorms/stylesheet.css'
 const App = () => {
 	const [activePanel, setActivePanel] = useState(ROUTES.INTRO);
 	const [fetchedUser, setUser] = useState(null);
-	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
+	// const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 
 	let user = null;
 
@@ -41,7 +41,7 @@ const App = () => {
 			}
 
 			setUser(userInfo);
-			setPopout(null);
+			// setPopout(null);
 		}
 
 		fetchData().then(() => {});
@@ -60,7 +60,7 @@ const App = () => {
 		<ConfigProvider scheme="bright_light">
 			<AdaptivityProvider>
 				<AppRoot>
-					<View activePanel={activePanel} popout={popout}>
+					<View activePanel={activePanel}{/* popout={popout}*/}>
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} startGame={startGame} />
 						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go} user={user}/>
 						<Menu id={ROUTES.MENU} go={go}/>
