@@ -53,7 +53,7 @@ const App = () => {
 
 	const startGame = () => {
 		// -- TODO - Set has_seen_intro = true
-		go(ROUTES.MENU)
+		setActivePanel(ROUTES.MENU)
 	}
 
 	return (
