@@ -60,7 +60,7 @@ const App = () => {
 		<ConfigProvider scheme="bright_light">
 			<AdaptivityProvider>
 				<AppRoot>
-					<View activePanel={activePanel}{/* popout={popout}*/}>
+					<View activePanel={activePanel}>
 						<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} startGame={startGame} />
 						<Profile id={ROUTES.PROFILE} fetchedUser={fetchedUser} go={go} user={user}/>
 						<Menu id={ROUTES.MENU} go={go}/>
