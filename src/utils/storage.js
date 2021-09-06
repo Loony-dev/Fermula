@@ -26,7 +26,9 @@ export async function storageInit() {
                 default:
                     break
             }
-        } catch (error) { /* code here.. */ }
+        } catch (error) {
+            return error;
+        }
     })
 
     return 'test'
