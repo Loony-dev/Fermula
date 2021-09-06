@@ -1,11 +1,11 @@
 import React from 'react';
-import {Panel, Header} from '@vkontakte/vkui';
+import {Panel} from '@vkontakte/vkui';
 
 import GameHeader from "../components/GameHeader"
 
 import '../assets/css/main.css';
 
-const Intro = ({id, fetchedUser, startGame}) => {
+const Intro = ({id, fetchedUser, startGame, snackbarError}) => {
     return (
         <Panel id={id}>
             <GameHeader balance={false} />
@@ -40,6 +40,8 @@ const Intro = ({id, fetchedUser, startGame}) => {
                     </div>
                 </div>
             </main>
+
+            {snackbarError}
         </Panel>
     )
 };

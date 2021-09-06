@@ -4,7 +4,7 @@ import {Panel} from "@vkontakte/vkui";
 import GameHeader from "../components/GameHeader";
 import CustomCarouselArrow from "../components/CustomCarouselArrow";
 
-import {ROUTES, responsive} from '../utils/constants'
+import {ROUTES, RESPONSIVE} from '../utils/constants'
 
 import Test7 from '../assets/img/test/test7.png'
 
@@ -13,7 +13,7 @@ import 'react-multi-carousel/lib/styles.css';
 
 import '../assets/css/main.css';
 
-const Garage = ({id, go}) => {
+const Garage = ({id, go, snackbarError}) => {
     return (
         <Panel id={id}>
             <GameHeader balance={true} />
@@ -21,7 +21,7 @@ const Garage = ({id, go}) => {
             <section className="section">
                 <div className="section-name">Достижения</div>
                 <div className="section-content">
-                    <Carousel customRightArrow={<CustomCarouselArrow left={false} />} customLeftArrow={<CustomCarouselArrow />} itemClass="card-achievement" responsive={responsive} className="p-30">
+                    <Carousel customRightArrow={<CustomCarouselArrow left={false} />} customLeftArrow={<CustomCarouselArrow />} itemClass="card-achievement" responsive={RESPONSIVE} className="p-30">
                         <div>
                             <img src={Test7} alt="" className="card-image" />
                             <div className="card-desc">1 элемент</div>
@@ -81,6 +81,8 @@ const Garage = ({id, go}) => {
                 </div>
             </section>
             <a onClick={go} data-to={ROUTES.MENU} className="buttons-primary w-50 mt d-block mx-auto"><span>Меню</span></a>
+
+            {snackbarError}
         </Panel>
     )
 }

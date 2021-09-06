@@ -13,7 +13,7 @@ import Test3 from '../assets/img/test/test3.png'
 import Test4 from '../assets/img/test/test4.png'
 import Test5 from '../assets/img/test/test5.png'
 
-const Profile = ({id, fetchedUser, go}) => {
+const Profile = ({id, fetchedUser, go, snackbarError}) => {
     return (
         <Panel id={id}>
             <div>
@@ -138,6 +138,8 @@ const Profile = ({id, fetchedUser, go}) => {
                     </section>
                 </main>
             </div>
+
+            {snackbarError}
         </Panel>
     )
 }
