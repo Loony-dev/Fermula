@@ -9,6 +9,8 @@ export async function storageInit() {
 
     const data = {};
 
+    let result = 'test'
+
     storageData.keys.forEach(({key, value}) => {
         try {
             data[key] = value ? JSON.parse(value) : {}
@@ -18,20 +20,22 @@ export async function storageInit() {
                     if (data[key].hasSeenIntro) {
                         // -- TODO - redirect to menu
                     }
+                    result = data[key]
                     break
 
                 case STORAGE_KEYS.USER_INFO:
-                    return data[key].lvl
+                    result = data[key].lvl
+                    break
 
                 default:
                     break
             }
         } catch (error) {
-            return error;
+            result = error;
         }
     })
 
-    return 'test'
+    return result
 }
 
 export async function storageSet(key, value) {
