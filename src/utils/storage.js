@@ -21,7 +21,7 @@ export async function storageInit() {
                     break
 
                 case STORAGE_KEYS.USER_INFO:
-                    return data[key]
+                    return data[key].lvl
 
                 default:
                     break
